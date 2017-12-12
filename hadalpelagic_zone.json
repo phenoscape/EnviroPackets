@@ -1,44 +1,50 @@
+
 {
-	"type" : "object",
-	"id" : "ENVO:00000214",
-	"label" : "hadalpelagic zone",
-	"properties" : {
-      "type" : "object",
-      "id" : "???",
-      "description" : "Environmental Attribute",
-      "properties" : {
-        "types" : {
-          "type" : "array",
-          "description" : "The array of measured attributes per envo id",
-          "items" : {
-            "type" : "object",
-            "$ref" : "???",
-            "item" : {
-            	"id" : "PATO:0015013",
-            	"label" : "degree of illumination",
-            	"unit" : {
-            		"id" : "UO:000160",
-            		"label" : "microeinstein per square meter per second"
-            	},
-            	"range" : "0,0"
-            },
-            "item" : {
-            	"id" : "PATO: 0000146",
-              "label" : "temperature",
-              "unit" : {
-                "id" : "UO: 0000012",
-                "label" : "kelvin"
-              },
-              "range" : "0.001,4.000"
-            },
-            "item" : {
-              "id" : "PATO:0001025",
-              "label" : "pressure",
-              "unit" : {
-                "id" : "UO:00000110",
-                "label" : "pascal"
-              },
-              "range" : "1100,.."
-          }
-        }
+	"entities": [
+		{
+			"id": "ENVO:00000214",
+			"type": "environment",
+			"label": "hadalpelagic zone"
+		},
+	],
+	"environment_profile" : [
+		{
+			"type" : "environment",
+			"id" : "ENVO:00000214",
+			"label" : "hadalpelagic zone",
+			"environment" : {
+				"types" : [
+					{
+						"id" : "PATO:0015013",
+						"label" : "degree of illumination",
+						"unit" : {
+							"$ref" : "UO:000160",
+							"label" : "microeinstein per square meter per second"
+						},
+						"range" : "0=x"
+					},
+					{
+						"id" : "PATO: 0000146",
+						"label" : "temperature",
+						"unit" : {
+							"$ref" : "UO: 0000012",
+							"label" : "kelvin"
+						},
+						"range" : "0.001<x<4.000"
+					},
+					{
+						"id" : "PATO:0001025",
+						"label" : "pressure",
+						"unit" : {
+							"$ref" : "UO:00000110",
+							"label" : "pascal"
+						},
+						"range" : "1100<x"
+					}
+				]
+			}
+		}
+	]
 }
+
+
