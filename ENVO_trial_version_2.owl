@@ -361,7 +361,7 @@
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature">
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
                 <owl:someValuesFrom>
@@ -410,7 +410,7 @@
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
