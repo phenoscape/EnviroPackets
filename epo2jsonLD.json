@@ -1,0 +1,97 @@
+{
+        "entities": [
+		{
+			"id": "ENVO:00000214",
+			"type": "environment",
+			"label": "hadalpelagic zone"
+		}
+	],
+	"environment_profile" : [
+		{
+			"type" : "environment",
+			"id" : "ENVO:00000214",
+			"label" : "hadalpelagic zone",
+			"environment" : {
+				"types" : [
+					{
+						"id" : "PATO:0015013",
+						"label" : "degree of illumination",
+						"unit" : {
+							"$ref" : "UO:000160",
+							"label" : "microeinstein per square meter per second"
+						},
+						"range" : "0=x"
+					},
+					{
+						"id" : "PATO: 0000146",
+						"label" : "temperature",
+						"unit" : {
+							"$ref" : "UO: 0000012",
+							"label" : "kelvin"
+						},
+						"range" : "0.001<x<4.000"
+					},
+					{
+						"id" : "PATO:0001025",
+						"label" : "pressure",
+						"unit" : {
+							"$ref" : "UO:00000110",
+							"label" : "pascal"
+						},
+						"range" : "1100<x"
+					}
+				]
+			}
+		}
+	],
+
+  "@context" : {
+    "id": "@id",
+    "label": "rdfs:label",
+    "types": {
+      "@id": "rdf:type",
+      "@type": "@id",
+      "@label": "rdfs:label",
+      "@unit": "pheno:unit",
+      "@range": "rdfs:range"
+    },
+    "pheno": "http://phenopackets.org/",
+    "variants": "pheno:variants",
+    "organisms": "pheno:organisms",
+    "phenotype_profile": "pheno:phenotype_profile",
+    "environment_profile": "pheno:environment_profile",
+    "variant_profile": "pheno:variant_profile",
+    "types": "pheno:types",
+    "entity": {
+      "@id": "pheno:entity",
+      "@type": "@id"
+    },    
+    "evidence": "pheno:evidence",
+    "environment": "pheno:environment",
+    "phenotype": "pheno:phenotype",
+    "variant": "pheno:variant",
+    "unit": "pheno:unit",
+    "value": "pheno:value",
+    "property_values": "pheno:property_values",
+    "measurements": "pheno:measurements",
+    "taxon": "pheno:taxon",
+    "supporting_entities": "pheno:supporting_entities",
+    "source": "dc:source",
+    "property": "pheno:property",
+    "date": "dc:date",
+    "UO": "http://purl.obolibrary.org/obo/UO_",
+    "obo" : "http://purl.obolibrary.org/obo/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "Class" : "owl:Class",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "type" : {
+      "@id" : "rdf:type",
+      "@type" : "@id"
+    },
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "oboInOwl" : "http://www.geneontology.org/formats/oboInOwl#",
+    "description" : "dc:description",
+    "subClassOf" : "owl:subClassOf"
+  }
+}
