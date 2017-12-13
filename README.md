@@ -16,3 +16,9 @@ FROM <http://enviropackets.org/epo>
 # filter crap
 FILTER (!isBlank(?s) && !regex(str(?p),"imports") ) 
 }
+
+
+# Phenoscape UX Mockup
+
+Concept for how environmental conditions might augment kb.phenoscape.org's UX and UI:
+https://xd.adobe.com/view/f563c738-9987-40ec-b593-780a0bf4854f?fullscreen
