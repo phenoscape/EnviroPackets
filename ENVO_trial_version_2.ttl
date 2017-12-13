@@ -1,9 +1,21 @@
 @prefix :      <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#> .
-@prefix ENVO_trial: <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix entity_attribute1: <http://purl.obolibrary.org/obo/envo-p/patterns/entity_attribute/> .
+@prefix foo:   <http://geneontology.org/foo/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix envo:  <http://purl.obolibrary.org/obo/envo#> .
+@prefix entity_attribute: <http://purl.obolibrary.org/obo/oba/patterns/entity_attribute/> .
+@prefix ENVO_trial: <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix pato:  <http://purl.obolibrary.org/obo/pato#> .
+@prefix entity_quality: <http://purl.obolibrary.org/obo/oba/patterns/entity_quality/> .
+@prefix process_attribute: <http://purl.obolibrary.org/obo/envo-p/patterns/process_attribute/> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 ENVO_trial:Light  a  owl:NamedIndividual , ENVO_trial:Parameter_type .
 
@@ -28,24 +40,26 @@ ENVO_trial:datum_3  a                  owl:NamedIndividual , ENVO_trial:Environm
 ENVO_trial:Environmental_parameters_datum
         a       owl:Class .
 
+obo:ENVO_00000214  owl:equivalentClass  ENVO_trial:semantic_representation_of_Hadal_Zone_light , ENVO_trial:semantic_representation_of_Hadal_Zone_pressure , <http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature> .
+
 ENVO_trial:collected_in
         a       owl:ObjectProperty .
 
 <http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_light>
         a                owl:Class ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      <http://purl.obolibrary.org/obo/RO_0000053> ;
+                           owl:onProperty      obo:RO_0000053 ;
                            owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( <http://purl.obolibrary.org/obo/PATO_0015013>
+                                                 owl:intersectionOf  ( obo:PATO_0015013
                                                                        [ a                   owl:Restriction ;
-                                                                         owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000417> ;
+                                                                         owl:onProperty      obo:IAO_0000417 ;
                                                                          owl:someValuesFrom  [ a                   owl:Class ;
                                                                                                owl:intersectionOf  ( [ a               owl:Restriction ;
                                                                                                                        owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second> ;
-                                                                                                                       owl:onProperty  <http://purl.obolibrary.org/obo/IAO_0000039>
+                                                                                                                       owl:onProperty  obo:IAO_0000039
                                                                                                                      ]
                                                                                                                      [ a                   owl:Restriction ;
-                                                                                                                       owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000004> ;
+                                                                                                                       owl:onProperty      obo:IAO_0000004 ;
                                                                                                                        owl:someValuesFrom  [ a                   rdfs:Datatype ;
                                                                                                                                              owl:intersectionOf  ( [ a                     rdfs:Datatype ;
                                                                                                                                                                      owl:onDatatype        xsd:float ;
@@ -79,7 +93,7 @@ ENVO_trial:datum_2  a                  owl:NamedIndividual , ENVO_trial:Environm
 
 <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial>
         a            owl:Ontology ;
-        owl:imports  <http://purl.obolibrary.org/obo/envo/releases/2017-08-22/envo.owl> , <http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl> , <http://purl.obolibrary.org/obo/pato/releases/2017-07-10/pato.owl> , <http://purl.obolibrary.org/obo/ro/releases/2017-10-02/ro.owl> , <http://purl.obolibrary.org/obo/uo/releases/2017-09-25/uo.owl> .
+        owl:imports  <http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl> , <http://purl.obolibrary.org/obo/uo/releases/2017-09-25/uo.owl> , <http://purl.obolibrary.org/obo/ro/releases/2017-10-02/ro.owl> , <http://purl.obolibrary.org/obo/envo/releases/2017-08-22/envo.owl> , <http://purl.obolibrary.org/obo/pato/releases/2017-07-10/pato.owl> .
 
 ENVO_trial:OSU_0000002323232
         a                        owl:NamedIndividual , ENVO_trial:Specimens ;
@@ -112,19 +126,19 @@ ENVO_trial:Parameter_type
 <http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_pressure>
         a                owl:Class ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      <http://purl.obolibrary.org/obo/RO_0000053> ;
+                           owl:onProperty      obo:RO_0000053 ;
                            owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( <http://purl.obolibrary.org/obo/PATO_0001025>
+                                                 owl:intersectionOf  ( obo:PATO_0001025
                                                                        [ a                   owl:Restriction ;
-                                                                         owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000417> ;
+                                                                         owl:onProperty      obo:IAO_0000417 ;
                                                                          owl:someValuesFrom  [ a                   owl:Class ;
                                                                                                owl:intersectionOf  ( [ a               owl:Restriction ;
                                                                                                                        owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#MPa> ;
-                                                                                                                       owl:onProperty  <http://purl.obolibrary.org/obo/IAO_0000039>
+                                                                                                                       owl:onProperty  obo:IAO_0000039
                                                                                                                      ]
                                                                                                                      [ a               owl:Restriction ;
                                                                                                                        owl:hasValue    "0.1"^^xsd:float ;
-                                                                                                                       owl:onProperty  <http://purl.obolibrary.org/obo/IAO_0000004>
+                                                                                                                       owl:onProperty  obo:IAO_0000004
                                                                                                                      ]
                                                                                                                    )
                                                                                              ]
@@ -167,19 +181,19 @@ ENVO_trial:has_environment_type
 ENVO_trial:semantic_representation_of_Hadal_Zone_light
         a                owl:Class ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      <http://purl.obolibrary.org/obo/RO_0000053> ;
+                           owl:onProperty      obo:RO_0000053 ;
                            owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( <http://purl.obolibrary.org/obo/PATO_0015013>
+                                                 owl:intersectionOf  ( obo:PATO_0015013
                                                                        [ a                   owl:Restriction ;
-                                                                         owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000417> ;
+                                                                         owl:onProperty      obo:IAO_0000417 ;
                                                                          owl:someValuesFrom  [ a                   owl:Class ;
                                                                                                owl:intersectionOf  ( [ a               owl:Restriction ;
                                                                                                                        owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second> ;
-                                                                                                                       owl:onProperty  <http://purl.obolibrary.org/obo/IAO_0000039>
+                                                                                                                       owl:onProperty  obo:IAO_0000039
                                                                                                                      ]
                                                                                                                      [ a               owl:Restriction ;
                                                                                                                        owl:hasValue    0 ;
-                                                                                                                       owl:onProperty  <http://purl.obolibrary.org/obo/IAO_0000004>
+                                                                                                                       owl:onProperty  obo:IAO_0000004
                                                                                                                      ]
                                                                                                                    )
                                                                                              ]
@@ -216,21 +230,27 @@ ENVO_trial:Pressure  a  owl:NamedIndividual , ENVO_trial:Parameter_type .
                     ] ;
         rdfs:label  "0.1 MPa" .
 
+ENVO_trial:Unit_individuals
+        a       owl:Class .
+
+ENVO_trial:has_parameter_type
+        a       owl:ObjectProperty .
+
 <http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature>
         a                    owl:Class ;
         owl:equivalentClass  [ a                   owl:Restriction ;
-                               owl:onProperty      <http://purl.obolibrary.org/obo/RO_0000053> ;
+                               owl:onProperty      obo:RO_0000053 ;
                                owl:someValuesFrom  [ a                   owl:Class ;
-                                                     owl:intersectionOf  ( <http://purl.obolibrary.org/obo/PATO_0000146>
+                                                     owl:intersectionOf  ( obo:PATO_0000146
                                                                            [ a                   owl:Restriction ;
-                                                                             owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000417> ;
+                                                                             owl:onProperty      obo:IAO_0000417 ;
                                                                              owl:someValuesFrom  [ a                   owl:Class ;
                                                                                                    owl:intersectionOf  ( [ a               owl:Restriction ;
                                                                                                                            owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#C> ;
-                                                                                                                           owl:onProperty  <http://purl.obolibrary.org/obo/IAO_0000039>
+                                                                                                                           owl:onProperty  obo:IAO_0000039
                                                                                                                          ]
                                                                                                                          [ a                   owl:Restriction ;
-                                                                                                                           owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000004> ;
+                                                                                                                           owl:onProperty      obo:IAO_0000004 ;
                                                                                                                            owl:someValuesFrom  [ a                   rdfs:Datatype ;
                                                                                                                                                  owl:intersectionOf  ( [ a                     rdfs:Datatype ;
                                                                                                                                                                          owl:onDatatype        xsd:float ;
@@ -252,12 +272,6 @@ ENVO_trial:Pressure  a  owl:NamedIndividual , ENVO_trial:Parameter_type .
                                                    ]
                              ] .
 
-ENVO_trial:has_parameter_type
-        a       owl:ObjectProperty .
-
-ENVO_trial:Unit_individuals
-        a       owl:Class .
-
 <http://purl.obolibrary.org/obo/UO_0000156#pressure_of_maize_field>
         a                              owl:NamedIndividual , ENVO_trial:Environmental_parameters_datum ;
         rdfs:label                     "pressure of maize field" ;
@@ -269,18 +283,18 @@ ENVO_trial:Unit_individuals
 ENVO_trial:semantic_representation_of_Hadal_Zone_pressure
         a                owl:Class ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      <http://purl.obolibrary.org/obo/RO_0000053> ;
+                           owl:onProperty      obo:RO_0000053 ;
                            owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( <http://purl.obolibrary.org/obo/PATO_0001025>
+                                                 owl:intersectionOf  ( obo:PATO_0001025
                                                                        [ a                   owl:Restriction ;
-                                                                         owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000417> ;
+                                                                         owl:onProperty      obo:IAO_0000417 ;
                                                                          owl:someValuesFrom  [ a                   owl:Class ;
                                                                                                owl:intersectionOf  ( [ a               owl:Restriction ;
                                                                                                                        owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#MPa> ;
-                                                                                                                       owl:onProperty  <http://purl.obolibrary.org/obo/IAO_0000039>
+                                                                                                                       owl:onProperty  obo:IAO_0000039
                                                                                                                      ]
                                                                                                                      [ a                   owl:Restriction ;
-                                                                                                                       owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000004> ;
+                                                                                                                       owl:onProperty      obo:IAO_0000004 ;
                                                                                                                        owl:someValuesFrom  [ a                     rdfs:Datatype ;
                                                                                                                                              owl:onDatatype        xsd:float ;
                                                                                                                                              owl:withRestrictions  ( [ xsd:minExclusive  "110.0"^^xsd:float ]
@@ -301,18 +315,18 @@ ENVO_trial:greater_than_110_MPa
 <http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_temperature>
         a                owl:Class ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      <http://purl.obolibrary.org/obo/RO_0000053> ;
+                           owl:onProperty      obo:RO_0000053 ;
                            owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( <http://purl.obolibrary.org/obo/PATO_0000146>
+                                                 owl:intersectionOf  ( obo:PATO_0000146
                                                                        [ a                   owl:Restriction ;
-                                                                         owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000417> ;
+                                                                         owl:onProperty      obo:IAO_0000417 ;
                                                                          owl:someValuesFrom  [ a                   owl:Class ;
                                                                                                owl:intersectionOf  ( [ a               owl:Restriction ;
                                                                                                                        owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#C> ;
-                                                                                                                       owl:onProperty  <http://purl.obolibrary.org/obo/IAO_0000039>
+                                                                                                                       owl:onProperty  obo:IAO_0000039
                                                                                                                      ]
                                                                                                                      [ a                   owl:Restriction ;
-                                                                                                                       owl:onProperty      <http://purl.obolibrary.org/obo/IAO_0000004> ;
+                                                                                                                       owl:onProperty      obo:IAO_0000004 ;
                                                                                                                        owl:someValuesFrom  [ a                   rdfs:Datatype ;
                                                                                                                                              owl:intersectionOf  ( [ a                     rdfs:Datatype ;
                                                                                                                                                                      owl:onDatatype        xsd:float ;
@@ -336,6 +350,10 @@ ENVO_trial:greater_than_110_MPa
 
 ENVO_trial:OSU_0000000000234234234
         a                        owl:NamedIndividual , ENVO_trial:Specimens ;
+        a                        [ a                   owl:Restriction ;
+                                   owl:onProperty      ENVO_trial:collected_in ;
+                                   owl:someValuesFrom  obo:ENVO_00000214
+                                 ] ;
         ENVO_trial:collected_in  ENVO_trial:Hadal_zone .
 
 ENVO_trial:has_parameter
