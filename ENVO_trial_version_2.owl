@@ -1,28 +1,30 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY ENVO_trial "http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#" >
-]>
-
-
 <rdf:RDF xmlns="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#"
      xml:base="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:entity_attribute1="http://purl.obolibrary.org/obo/envo-p/patterns/entity_attribute/"
+     xmlns:foo="http://geneontology.org/foo/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:envo="http://purl.obolibrary.org/obo/envo#"
+     xmlns:entity_attribute="http://purl.obolibrary.org/obo/oba/patterns/entity_attribute/"
      xmlns:ENVO_trial="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:pato="http://purl.obolibrary.org/obo/pato#"
+     xmlns:entity_quality="http://purl.obolibrary.org/obo/oba/patterns/entity_quality/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:process_attribute="http://purl.obolibrary.org/obo/envo-p/patterns/process_attribute/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial">
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/envo/releases/2017-08-22/envo.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2017-07-10/pato.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2017-10-02/ro.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/uo/releases/2017-09-25/uo.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2017-10-02/ro.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/envo/releases/2017-08-22/envo.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2017-07-10/pato.owl"/>
     </owl:Ontology>
     
 
@@ -40,31 +42,31 @@
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#collected_in -->
 
-    <owl:ObjectProperty rdf:about="&ENVO_trial;collected_in"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#collected_in"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#denotes -->
 
-    <owl:ObjectProperty rdf:about="&ENVO_trial;denotes"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#denotes"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#has_environment_type -->
 
-    <owl:ObjectProperty rdf:about="&ENVO_trial;has_environment_type"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#has_environment_type"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#has_parameter -->
 
-    <owl:ObjectProperty rdf:about="&ENVO_trial;has_parameter"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#has_parameter"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#has_parameter_type -->
 
-    <owl:ObjectProperty rdf:about="&ENVO_trial;has_parameter_type"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#has_parameter_type"/>
     
 
 
@@ -76,6 +78,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000214 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000214">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Hadal_Zone_light"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Hadal_Zone_pressure"/>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature"/>
+    </rdf:Description>
     
 
 
@@ -104,18 +116,18 @@
                                                     <rdfs:Datatype>
                                                         <owl:intersectionOf rdf:parseType="Collection">
                                                             <rdfs:Datatype>
-                                                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
                                                                 <owl:withRestrictions rdf:parseType="Collection">
                                                                     <rdf:Description>
-                                                                        <xsd:minInclusive rdf:datatype="&xsd;float">1000.0</xsd:minInclusive>
+                                                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1000.0</xsd:minInclusive>
                                                                     </rdf:Description>
                                                                 </owl:withRestrictions>
                                                             </rdfs:Datatype>
                                                             <rdfs:Datatype>
-                                                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
                                                                 <owl:withRestrictions rdf:parseType="Collection">
                                                                     <rdf:Description>
-                                                                        <xsd:maxInclusive rdf:datatype="&xsd;float">1500.0</xsd:maxInclusive>
+                                                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1500.0</xsd:maxInclusive>
                                                                     </rdf:Description>
                                                                 </owl:withRestrictions>
                                                             </rdfs:Datatype>
@@ -157,7 +169,7 @@
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
-                                                <owl:hasValue rdf:datatype="&xsd;float">0.1</owl:hasValue>
+                                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</owl:hasValue>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -197,18 +209,18 @@
                                                     <rdfs:Datatype>
                                                         <owl:intersectionOf rdf:parseType="Collection">
                                                             <rdfs:Datatype>
-                                                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
                                                                 <owl:withRestrictions rdf:parseType="Collection">
                                                                     <rdf:Description>
-                                                                        <xsd:minInclusive rdf:datatype="&xsd;float">-20.0</xsd:minInclusive>
+                                                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">-20.0</xsd:minInclusive>
                                                                     </rdf:Description>
                                                                 </owl:withRestrictions>
                                                             </rdfs:Datatype>
                                                             <rdfs:Datatype>
-                                                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
                                                                 <owl:withRestrictions rdf:parseType="Collection">
                                                                     <rdf:Description>
-                                                                        <xsd:maxInclusive rdf:datatype="&xsd;float">50.0</xsd:maxInclusive>
+                                                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50.0</xsd:maxInclusive>
                                                                     </rdf:Description>
                                                                 </owl:withRestrictions>
                                                             </rdfs:Datatype>
@@ -231,43 +243,43 @@
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environment_type -->
 
-    <owl:Class rdf:about="&ENVO_trial;Environment_type"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environment_type"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters -->
 
-    <owl:Class rdf:about="&ENVO_trial;Environmental_parameters"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum -->
 
-    <owl:Class rdf:about="&ENVO_trial;Environmental_parameters_datum"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Parameter_type -->
 
-    <owl:Class rdf:about="&ENVO_trial;Parameter_type"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Parameter_type"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Specimens -->
 
-    <owl:Class rdf:about="&ENVO_trial;Specimens"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Specimens"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Unit_individuals -->
 
-    <owl:Class rdf:about="&ENVO_trial;Unit_individuals"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Unit_individuals"/>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Hadal_Zone_light -->
 
-    <owl:Class rdf:about="&ENVO_trial;semantic_representation_of_Hadal_Zone_light">
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Hadal_Zone_light">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
@@ -286,7 +298,7 @@
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
-                                                <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+                                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -303,7 +315,7 @@
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Hadal_Zone_pressure -->
 
-    <owl:Class rdf:about="&ENVO_trial;semantic_representation_of_Hadal_Zone_pressure">
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Hadal_Zone_pressure">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
@@ -324,10 +336,10 @@
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
                                                 <owl:someValuesFrom>
                                                     <rdfs:Datatype>
-                                                        <owl:onDatatype rdf:resource="&xsd;float"/>
+                                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
                                                         <owl:withRestrictions rdf:parseType="Collection">
                                                             <rdf:Description>
-                                                                <xsd:minExclusive rdf:datatype="&xsd;float">110.0</xsd:minExclusive>
+                                                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">110.0</xsd:minExclusive>
                                                             </rdf:Description>
                                                         </owl:withRestrictions>
                                                     </rdfs:Datatype>
@@ -371,18 +383,18 @@
                                                     <rdfs:Datatype>
                                                         <owl:intersectionOf rdf:parseType="Collection">
                                                             <rdfs:Datatype>
-                                                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
                                                                 <owl:withRestrictions rdf:parseType="Collection">
                                                                     <rdf:Description>
-                                                                        <xsd:minInclusive rdf:datatype="&xsd;float">0.0</xsd:minInclusive>
+                                                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
                                                                     </rdf:Description>
                                                                 </owl:withRestrictions>
                                                             </rdfs:Datatype>
                                                             <rdfs:Datatype>
-                                                                <owl:onDatatype rdf:resource="&xsd;float"/>
+                                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
                                                                 <owl:withRestrictions rdf:parseType="Collection">
                                                                     <rdf:Description>
-                                                                        <xsd:maxInclusive rdf:datatype="&xsd;float">4.0</xsd:maxInclusive>
+                                                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</xsd:maxInclusive>
                                                                     </rdf:Description>
                                                                 </owl:withRestrictions>
                                                             </rdfs:Datatype>
@@ -417,7 +429,7 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#C -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#C">
-        <rdf:type rdf:resource="&ENVO_trial;Unit_individuals"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Unit_individuals"/>
     </owl:NamedIndividual>
     
 
@@ -425,7 +437,7 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#MPa -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#MPa">
-        <rdf:type rdf:resource="&ENVO_trial;Unit_individuals"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Unit_individuals"/>
     </owl:NamedIndividual>
     
 
@@ -433,7 +445,7 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#Maize_Field -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field">
-        <rdf:type rdf:resource="&ENVO_trial;Environment_type"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environment_type"/>
     </owl:NamedIndividual>
     
 
@@ -441,7 +453,7 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second">
-        <rdf:type rdf:resource="&ENVO_trial;Unit_individuals"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Unit_individuals"/>
         <rdfs:label>einstein per square meter per second</rdfs:label>
     </owl:NamedIndividual>
     
@@ -450,11 +462,11 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#light_of_maize_field -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#light_of_maize_field">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters_datum"/>
-        <rdfs:label>light of maize field</rdfs:label>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
         <has_environment_type rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field"/>
         <has_parameter rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#1000-1500_Einsteins_/_m2_/_sec"/>
-        <has_parameter_type rdf:resource="&ENVO_trial;Light"/>
+        <has_parameter_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Light"/>
+        <rdfs:label>light of maize field</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -462,10 +474,10 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#maizfieldtemperature -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#maizfieldtemperature">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ENVO_trial;denotes"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#denotes"/>
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_temperature"/>
             </owl:Restriction>
         </rdf:type>
@@ -477,11 +489,11 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#pressure_of_maize_field -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#pressure_of_maize_field">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters_datum"/>
-        <rdfs:label>pressure of maize field</rdfs:label>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
         <has_environment_type rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field"/>
         <has_parameter rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#pressuremaizefield"/>
-        <has_parameter_type rdf:resource="&ENVO_trial;Pressure"/>
+        <has_parameter_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Pressure"/>
+        <rdfs:label>pressure of maize field</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -489,10 +501,10 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#pressuremaizefield -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#pressuremaizefield">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ENVO_trial;denotes"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#denotes"/>
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_pressure"/>
             </owl:Restriction>
         </rdf:type>
@@ -504,11 +516,11 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#temperature_of_maize_field -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#temperature_of_maize_field">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters_datum"/>
-        <rdfs:label>temperature of maize field</rdfs:label>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
         <has_environment_type rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field"/>
         <has_parameter rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#maizfieldtemperature"/>
-        <has_parameter_type rdf:resource="&ENVO_trial;Temperature"/>
+        <has_parameter_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Temperature"/>
+        <rdfs:label>temperature of maize field</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -516,10 +528,10 @@
     <!-- http://purl.obolibrary.org/obo/UO_0000156#1000-1500_Einsteins_/_m2_/_sec -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#1000-1500_Einsteins_/_m2_/_sec">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ENVO_trial;denotes"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#denotes"/>
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_light"/>
             </owl:Restriction>
         </rdf:type>
@@ -530,33 +542,39 @@
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Hadal_zone -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;Hadal_zone">
-        <rdf:type rdf:resource="&ENVO_trial;Environment_type"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Hadal_zone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environment_type"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Light -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;Light">
-        <rdf:type rdf:resource="&ENVO_trial;Parameter_type"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Light">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Parameter_type"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#OSU_0000000000234234234 -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;OSU_0000000000234234234">
-        <rdf:type rdf:resource="&ENVO_trial;Specimens"/>
-        <collected_in rdf:resource="&ENVO_trial;Hadal_zone"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#OSU_0000000000234234234">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Specimens"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#collected_in"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000214"/>
+            </owl:Restriction>
+        </rdf:type>
+        <collected_in rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Hadal_zone"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#OSU_0000002323232 -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;OSU_0000002323232">
-        <rdf:type rdf:resource="&ENVO_trial;Specimens"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#OSU_0000002323232">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Specimens"/>
         <collected_in rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field"/>
     </owl:NamedIndividual>
     
@@ -564,60 +582,60 @@
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Pressure -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;Pressure">
-        <rdf:type rdf:resource="&ENVO_trial;Parameter_type"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Pressure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Parameter_type"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Temperature -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;Temperature">
-        <rdf:type rdf:resource="&ENVO_trial;Parameter_type"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Temperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Parameter_type"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#datum_1 -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;datum_1">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters_datum"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#datum_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
+        <has_environment_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Hadal_zone"/>
+        <has_parameter rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#&apos;0–4_celsius&apos;"/>
+        <has_parameter_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Temperature"/>
         <rdfs:label>temperature of hadal zone</rdfs:label>
-        <has_environment_type rdf:resource="&ENVO_trial;Hadal_zone"/>
-        <has_parameter_type rdf:resource="&ENVO_trial;Temperature"/>
-        <has_parameter rdf:resource="&ENVO_trial;&apos;0–4_celsius&apos;"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#datum_2 -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;datum_2">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters_datum"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#datum_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
+        <has_environment_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Hadal_zone"/>
+        <has_parameter rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#greater_than_110_MPa"/>
+        <has_parameter_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Pressure"/>
         <rdfs:label>pressure of hadal zone</rdfs:label>
-        <has_environment_type rdf:resource="&ENVO_trial;Hadal_zone"/>
-        <has_parameter_type rdf:resource="&ENVO_trial;Pressure"/>
-        <has_parameter rdf:resource="&ENVO_trial;greater_than_110_MPa"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#datum_3 -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;datum_3">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters_datum"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#datum_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
+        <has_environment_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Hadal_zone"/>
+        <has_parameter rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#0"/>
+        <has_parameter_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Light"/>
         <rdfs:label>light of hadal zone</rdfs:label>
-        <has_environment_type rdf:resource="&ENVO_trial;Hadal_zone"/>
-        <has_parameter_type rdf:resource="&ENVO_trial;Light"/>
-        <has_parameter rdf:resource="&ENVO_trial;0"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#greater_than_110_MPa -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;greater_than_110_MPa">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#greater_than_110_MPa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
         <rdfs:label>&gt;110 MPa</rdfs:label>
     </owl:NamedIndividual>
     
@@ -625,8 +643,8 @@
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#&apos;0-4_celsius&apos; -->
 
-    <owl:Thing rdf:about="&ENVO_trial;&apos;0-4_celsius&apos;">
-        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    <owl:Thing rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#&apos;0-4_celsius&apos;">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdfs:label>0-4 celsius</rdfs:label>
     </owl:Thing>
     
@@ -634,8 +652,8 @@
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#&apos;0–4_celsius&apos; -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;&apos;0–4_celsius&apos;">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#&apos;0–4_celsius&apos;">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
         <rdfs:label>0-4 celsius</rdfs:label>
     </owl:NamedIndividual>
     
@@ -643,12 +661,12 @@
 
     <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#0 -->
 
-    <owl:NamedIndividual rdf:about="&ENVO_trial;0">
-        <rdf:type rdf:resource="&ENVO_trial;Environmental_parameters"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
         <rdf:type>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ENVO_trial;denotes"/>
-                <owl:allValuesFrom rdf:resource="&ENVO_trial;semantic_representation_of_Hadal_Zone_light"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#denotes"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Hadal_Zone_light"/>
             </owl:Restriction>
         </rdf:type>
         <rdfs:label>0 µm Einsteins / m2 / sec</rdfs:label>
@@ -657,5 +675,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
 
