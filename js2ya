@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+"""Converts json to yaml if input file ends with .json and yaml to json if ends with .yaml""" 
+
+import sys
+import json, yaml
+
+if len(sys.argv) < 2:
+    print(__doc__)
+    sys.exit(0)
+    
+if sys.argv[1].endswith(".json"): 
+    sys.stdout.write(yaml.dump(json.load(open(sys.argv[1]))))
+
+elif sys.argv[1].endswith(".yaml"):
+    sys.stdout.write(json.dumps(yaml.load(open(sys.argv[1])), sort_keys=True, indent=2))
+
+else:
+    print(__doc__)
+    sys.exit(1)
+

@@ -1,0 +1,20 @@
+entities:
+- {id: 'ENVO:00000214', label: hadalpelagic zone, type: environment}
+environment_profile:
+- environment:
+    types:
+    - id: PATO:0015013
+      label: degree of illumination
+      range: 0=x
+      unit: {$ref: 'UO:000160', label: microeinstein per square meter per second}
+    - id: 'PATO: 0000146'
+      label: temperature
+      range: 0.001<x<4.000
+      unit: {$ref: 'UO: 0000012', label: kelvin}
+    - id: PATO:0001025
+      label: pressure
+      range: 1100<x
+      unit: {$ref: 'UO:00000110', label: pascal}
+  id: ENVO:00000214
+  label: hadalpelagic zone
+  type: environment
