@@ -563,10 +563,10 @@
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#collected_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000214"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000214"/>
             </owl:Restriction>
         </rdf:type>
-        <collected_in rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Hadal_zone"/>
+        <collected_in rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#OWLNamedIndividual_00000000000000000003"/>
     </owl:NamedIndividual>
     
 
@@ -576,6 +576,15 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#OSU_0000002323232">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Specimens"/>
         <collected_in rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#OWLNamedIndividual_00000000000000000003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#OWLNamedIndividual_00000000000000000003">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000214"/>
+        <rdfs:label xml:lang="en">mariana_trench</rdfs:label>
     </owl:NamedIndividual>
     
 
