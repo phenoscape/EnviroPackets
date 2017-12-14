@@ -17,7 +17,7 @@
 						"id" : "PATO:0015013",
 						"label" : "degree of illumination",
 						"unit" : {
-							"$ref" : "UO:000160",
+							"id" : "UO:000160",
 							"label" : "microeinstein per square meter per second"
 						},
 						"range" : "0=x"
@@ -26,7 +26,7 @@
 						"id" : "PATO: 0000146",
 						"label" : "temperature",
 						"unit" : {
-							"$ref" : "UO: 0000012",
+							"id" : "UO: 0000012",
 							"label" : "kelvin"
 						},
 						"range" : "0.001<x<4.000"
@@ -35,7 +35,7 @@
 						"id" : "PATO:0001025",
 						"label" : "pressure",
 						"unit" : {
-							"$ref" : "UO:00000110",
+							"id" : "UO:00000110",
 							"label" : "pascal"
 						},
 						"range" : "1100<x"
