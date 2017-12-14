@@ -95,6 +95,10 @@ ENVO_trial:datum_2  a                  owl:NamedIndividual , ENVO_trial:Environm
         a            owl:Ontology ;
         owl:imports  <http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl> , <http://purl.obolibrary.org/obo/uo/releases/2017-09-25/uo.owl> , <http://purl.obolibrary.org/obo/ro/releases/2017-10-02/ro.owl> , <http://purl.obolibrary.org/obo/envo/releases/2017-08-22/envo.owl> , <http://purl.obolibrary.org/obo/pato/releases/2017-07-10/pato.owl> .
 
+ENVO_trial:OWLNamedIndividual_00000000000000000003
+        a           owl:NamedIndividual , obo:ENVO_00000214 ;
+        rdfs:label  "mariana_trench"@en .
+
 ENVO_trial:OSU_0000002323232
         a                        owl:NamedIndividual , ENVO_trial:Specimens ;
         ENVO_trial:collected_in  <http://purl.obolibrary.org/obo/UO_0000156#Maize_Field> .
@@ -350,11 +354,11 @@ ENVO_trial:greater_than_110_MPa
 
 ENVO_trial:OSU_0000000000234234234
         a                        owl:NamedIndividual , ENVO_trial:Specimens ;
-        a                        [ a                   owl:Restriction ;
-                                   owl:onProperty      ENVO_trial:collected_in ;
-                                   owl:someValuesFrom  obo:ENVO_00000214
+        a                        [ a                  owl:Restriction ;
+                                   owl:allValuesFrom  obo:ENVO_00000214 ;
+                                   owl:onProperty     ENVO_trial:collected_in
                                  ] ;
-        ENVO_trial:collected_in  ENVO_trial:Hadal_zone .
+        ENVO_trial:collected_in  ENVO_trial:OWLNamedIndividual_00000000000000000003 .
 
 ENVO_trial:has_parameter
         a       owl:ObjectProperty .
