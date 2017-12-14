@@ -1,0 +1,45 @@
+pattern_name: wasp_data
+classes: 
+  environmental feature: ENVO:00002297
+  multicellular organism: HAO:0000012
+  anatomical line: HAO:0000008
+  cellular organism: NCBITaxon:131567
+
+relations:
+  has part: BFO:0000051
+  has part: BAO:0090004
+  located in: RO:0001025
+  in taxon: RO:0002162
+  is quality measured as: IAO:0000417
+  has measurement unit label: IAO:0000039
+
+vars: 
+  specimen: "Thing"
+  part: "Thing"
+  measurement: "Value"
+  unit: "Thing"
+  taxa: "Thing"
+  environment: "Thing"
+  
+name:
+  text: "%s %s measurment"
+  vars: 
+    - specimen
+    - part
+    
+def: 
+  # text: "The measurment of a hymenoptra specimen's head width, collected from the hadal zone"
+  text: "The measurment of a %s specimen's %s, collected from %s"
+  vars:
+    - taxa
+    - part
+    - environment
+
+    
+equivalentTo: 
+  text: "has part some (%s and (bearer of some (%s and (is quality measured as some ((has measurement unit label value %s) and (has measurement value some float[%sf]))))))"
+  vars:
+    - part
+    - quality
+    - unit
+    - measurement
