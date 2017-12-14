@@ -8,15 +8,7 @@ Phenopacket Schema Definition: https://github.com/phenopackets/phenopacket-forma
 Phenopacket Examples: https://github.com/phenopackets/phenopacket-format/tree/master/examples/level-1
 
 SPARQL-endpoint: http://semantics.senckenberg.de/sparql
-GRAPH: 		 http://enviropackets.org/epo
-
-SELECT ?s ?p ?o 
-FROM <http://enviropackets.org/epo>
-{ ?s ?p ?o .
-# filter crap
-FILTER (!isBlank(?s) && !regex(str(?p),"imports") ) 
-}
-
+(pipeline to ttl: enpa_pipeline.sh)
 
 # Phenoscape UX Mockup
 
