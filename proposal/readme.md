@@ -27,6 +27,134 @@ There's an assumption that someone will tie these ENVO classes to existing envir
 Assuming all this exists, THEN someone needs to connect biological specimen and taxon records with these ENVO terms in a consistent and queryable way. This will allow for environmental conditions to be inferred per specimen or taxon.
 
 ### Phenopackets as a communication format
-We were intrigued by how this system might standardize its inputs and outputs via [PhenoPackets](http://phenopackets.org/), "an open standard for representing and sharing detailed descriptions of phenotypic abnormalities and characteristics of individual patients, organisms, diseases, and publications." The [PhenoPacket schema](https://github.com/phenopackets/phenopacket-format/blob/master/schema/phenopacket-schema.json) includes an `environment_profile` object (described on line 533 of the linked file) that enables relevant environmental conditions to be listed and described. In our use case, we might be interested in a "PhenoPacket" that incorporates some combination of organisms, phenotypes, and/or environmental conditions.
+We were intrigued by how this system might standardize its inputs and outputs via [PhenoPackets](http://phenopackets.org/), "an open standard for representing and sharing detailed descriptions of phenotypic abnormalities and characteristics of individual patients, organisms, diseases, and publications." The [PhenoPacket schema](https://github.com/phenopackets/phenopacket-format/blob/master/schema/phenopacket-schema.json) includes an `environment_profile` object (described on line 533 of the linked file) that enables relevant environmental conditions to be listed and described. In our use case, we might be interested in a "PhenoPacket" that incorporates some combination of organisms, phenotypes, and/or environmental conditions. 
 
-...(WIP)
+The existing schema for `environment_profile` is reprinted here for reference:
+
+```
+ "environment_profile" : {
+      "type" : "array",
+      "items" : {
+        "type" : "object",
+        "id" : "urn:jsonschema:org:phenopackets:api:model:association:EnvironmentAssociation",
+        "properties" : {
+          "environment" : {
+            "type" : "object",
+            "$ref" : "urn:jsonschema:org:phenopackets:api:model:environment:Environment",
+            "description" : "The environment which this association is about"
+          },
+          "entity" : {
+            "type" : "string"
+          },
+          "evidence" : {
+            "type" : "array",
+            "description" : "Any Association can have any number of pieces of evidence attached",
+            "items" : {
+              "type" : "object",
+              "$ref" : "urn:jsonschema:org:phenopackets:api:model:meta:Evidence"
+            }
+          }
+        }
+      }
+    }
+```
+
+[The only example of this we could find](https://github.com/phenopackets/phenopacket-reference-implementation/blob/cc590e3ef12852ced5e80af9996647bc2a00da25/src/test/resources/context/phenopacket-without-context.yaml) describes the behavior of a human patient. Based on this schema alone, another organism-focused PhenoPacket with habitat-oriented context is presented below:
+
+```
+{
+  "id": "#1",
+  "title": "organism/environment example #1",
+  "organisms": [
+    {
+      "id": "organism#1",
+      "label": "example organism",
+      "taxon": NCBITaxon:XXXXX
+    }
+  ],
+  "environment_profile": [
+    {
+      "entity": "organism#1",
+      "environment": {
+        "description": "Habitat",
+        "types": [
+          {
+            "id": "ENVO:00000214",
+            "label": "hadalpelagic zone"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "types": [
+            {
+              "id": "ECO:XXXXXX",
+              "label": "TAS"
+            }
+          ],
+          "source": [
+            {
+              "id": "PMID:XXXXXXXX"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+Of course, this example assumes that the referenced ENVO class (ENVO:00000214) would be associated with specific environmental conditions that could be easily retrieved. This is not currently the case, but even if it were, there may be cases in which it makes sense to communicate more specific environmental conditions than would be appropriate to create individual ontology classes for. 
+
+For example, a query or response might be defined by the temperature range (2-4°C == 275.15-277.15°K) found in the hadalpelagic zone (deep-sea areas around thermal vents). In order to define this, several values must be considered, including the PATO class for the environmental condition, the UO class for the relevant unit of measurement, and the min and max numeric values associated with the measured range. In this case, we're focused on `PATO:0000146`(temperature), using unit `UO:0000012`(kelvin), with min float value `275.15` and max float value `277.15`. 
+
+In order to represent this, we'd need to augment the `types` object with definitions of the unit and min/max values. Here's how this might be displayed in a slightly altered PhenoPacket schema:
+
+```
+{
+  "id": "#2",
+  "title": "organism/environment example #2",
+  "organisms": [
+    {
+      "id": "organism#1",
+      "label": "example organism",
+      "taxon": NCBITaxon:XXXXX
+    }
+  ],
+  "environment_profile": [
+    {
+      "entity": "organism#1",
+      "environment": {
+        "description": "Habitat",
+        "types": [
+          {
+            "id" : "PATO: 0000146",
+            "label" : "temperature",
+            "unit" : {
+              "id" : "UO: 0000012",
+              "label" : "kelvin"
+            },
+            "min" : "275.15",
+            "max" : "277.15"
+          }
+        ]
+      },
+      "evidence": [
+        {
+          "types": [
+            {
+              "id": "ECO:XXXXXX",
+              "label": "TAS"
+            }
+          ],
+          "source": [
+            {
+              "id": "PMID:XXXXXXXX"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+As the `type` object isn't explicitly defined in the current PhenoPackets schema, this format (or something similar) could either be adopted as a best practice or be officially adopted via the schema and documentation.
