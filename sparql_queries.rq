@@ -1,15 +1,91 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX owl:<http://www.w3.org/2002/07/owl#>
-PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+#! /bin/bash
+
+### show specimen in knowledgebase
+printf "\n1.) list example specimen in knowledgebase:\n\n"
+curl -H "Accept: text/csv" -F "query=
+PREFIX et: <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#>
+SELECT ?specimen
+FROM  <http://enviropackets.org/epo>
+WHERE {
+?specimen et:collected_in ?env .
+}" semantics.senckenberg.de/sparql
+
+### show properiies assigned to sets of habitats
+
+printf "\n2.) list properiies assigned to sets of habitats\n\n"
+curl -H "Accept: text/csv" -F "query=PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+#PREFIX owl:<http://www.w3.org/2002/07/owl#>
+#PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+#PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
 PREFIX et: <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#>
 
-SELECT * 
-FROM <http://enviropackets.org/epo>
-WHERE { 
-?thing rdf:type ?desc .
-?desc a owl:Restriction ;
-owl:onProperty et:denotes ;
-owl:allValuesFrom ?stuff .
+
+SELECT ?env ?prop ?what
+FROM  <http://enviropackets.org/epo>
+WHERE {
+?specimen et:collected_in ?env .
+?prop et:has_environment_type ?env ;
+et:has_parameter_type ?what .
+}" semantics.senckenberg.de/sparql
+
+### We have data of two (artificial) species, one collected in the Hadal zone of the Mariana Trench, the other in a Maize field: #
+
+printf "\n3.) Print info of the EnviroPackets in the Knowledge Base\n\n" 
+curl -H "Accept: text/csv" -F "query=
+#PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+#PREFIX owl:<http://www.w3.org/2002/07/owl#>
+#PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+#PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX et: <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#>
+
+
+SELECT ?env ?prop ?param ?what 
+FROM  <http://enviropackets.org/epo>
+WHERE {
+?specimen et:collected_in ?env .
+?prop et:has_environment_type ?env ;
+et:has_parameter ?param ;
+et:has_parameter_type ?what .
 }
+ORDER BY ?env
+" semantics.senckenberg.de/sparql
+
+
+printf "\n4.) Print info of species in a Maize field with certain light condition using SPARQL 1. FILTER\n\n" 
+curl -H "Accept: text/csv" -F 'query=
+PREFIX et: <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#>
+PREFIX dummy: <http://purl.obolibrary.org/obo/UO_0000156#>
+
+PREFIX et: <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#>
+ 
+SELECT ?sp ?env ?val
+FROM  <http://enviropackets.org/epo>
+WHERE {
+    ?sp et:collected_in ?env .
+    ?prop et:has_environment_type ?env ;
+    et:has_parameter_type et:Light ;
+    et:has_parameter ?val .
+    FILTER(contains(str(?val), "1000-"))
+}' semantics.senckenberg.de/sparql
+
+
+
+### Give all species in a Maize Field with certain light conditions: ###
+
+printf "\n5.) EnviroPackets query for values of light_of_maize_field.\n\n" 
+curl -H "Accept: text/csv" -F 'query=
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX et: <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#>
+
+#SELECT ?sp ?env ?val
+SELECT ?val ?prop ?env
+FROM  <http://enviropackets.org/epo>
+WHERE {
+?sp et:collected_in ?env .
+?prop et:has_environment_type ?env ;
+et:has_parameter_type et:Light ;
+et:has_parameter ?val .
+FILTER REGEX (?prop, "light\\w+maize\\w+field","i") 
+}' semantics.senckenberg.de/sparql
 
