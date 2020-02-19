@@ -91,9 +91,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_light -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Maize_Field_light -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_light">
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Maize_Field_light">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
@@ -108,7 +108,7 @@
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                                                <owl:hasValue rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second"/>
+                                                <owl:hasValue rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#einstein_per_square_meter_per_second"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
@@ -148,9 +148,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_pressure -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Maize_Field_pressure -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_pressure">
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Maize_Field_pressure">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
@@ -165,7 +165,7 @@
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                                                <owl:hasValue rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#MPa"/>
+                                                <owl:hasValue rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#MPa"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
@@ -184,9 +184,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_temperature -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Maize_Field_temperature -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_temperature">
+    <owl:Class rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Maize_Field_temperature">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
@@ -201,7 +201,7 @@
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                                                <owl:hasValue rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#C"/>
+                                                <owl:hasValue rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#C"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
@@ -294,7 +294,7 @@
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                                                <owl:hasValue rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second"/>
+                                                <owl:hasValue rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#einstein_per_square_meter_per_second"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
@@ -330,7 +330,7 @@
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                                                <owl:hasValue rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#MPa"/>
+                                                <owl:hasValue rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#MPa"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
@@ -375,7 +375,7 @@
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                                                <owl:hasValue rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#C"/>
+                                                <owl:hasValue rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#C"/>
                                             </owl:Restriction>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000004"/>
@@ -426,59 +426,59 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#C -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#C -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#C">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#C">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Unit_individuals"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#MPa -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#MPa -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#MPa">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#MPa">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Unit_individuals"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#Maize_Field -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Maize_Field -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Maize_Field">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environment_type"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#einstein_per_square_meter_per_second -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#einstein_per_square_meter_per_second">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Unit_individuals"/>
         <rdfs:label>einstein per square meter per second</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#light_of_maize_field -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#light_of_maize_field -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#light_of_maize_field">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#light_of_maize_field">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
-        <has_environment_type rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field"/>
-        <has_parameter rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#1000-1500_Einsteins_/_m2_/_sec"/>
+        <has_environment_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Maize_Field"/>
+        <has_parameter rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#1000-1500_Einsteins_/_m2_/_sec"/>
         <has_parameter_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Light"/>
         <rdfs:label>light of maize field</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#maizfieldtemperature -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#maizfieldtemperature -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#maizfieldtemperature">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#maizfieldtemperature">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#denotes"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_temperature"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Maize_Field_temperature"/>
             </owl:Restriction>
         </rdf:type>
         <rdfs:label>-20-50 celsius</rdfs:label>
@@ -486,26 +486,26 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#pressure_of_maize_field -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#pressure_of_maize_field -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#pressure_of_maize_field">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#pressure_of_maize_field">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
-        <has_environment_type rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field"/>
-        <has_parameter rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#pressuremaizefield"/>
+        <has_environment_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Maize_Field"/>
+        <has_parameter rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#pressuremaizefield"/>
         <has_parameter_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Pressure"/>
         <rdfs:label>pressure of maize field</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#pressuremaizefield -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#pressuremaizefield -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#pressuremaizefield">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#pressuremaizefield">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#denotes"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_pressure"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Maize_Field_pressure"/>
             </owl:Restriction>
         </rdf:type>
         <rdfs:label>0.1 MPa</rdfs:label>
@@ -513,26 +513,26 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#temperature_of_maize_field -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#temperature_of_maize_field -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#temperature_of_maize_field">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#temperature_of_maize_field">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters_datum"/>
-        <has_environment_type rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field"/>
-        <has_parameter rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#maizfieldtemperature"/>
+        <has_environment_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Maize_Field"/>
+        <has_parameter rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#maizfieldtemperature"/>
         <has_parameter_type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Temperature"/>
         <rdfs:label>temperature of maize field</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/UO_0000156#1000-1500_Einsteins_/_m2_/_sec -->
+    <!-- http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#1000-1500_Einsteins_/_m2_/_sec -->
 
-    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/UO_0000156#1000-1500_Einsteins_/_m2_/_sec">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#1000-1500_Einsteins_/_m2_/_sec">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Environmental_parameters"/>
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#denotes"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_light"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#semantic_representation_of_Maize_Field_light"/>
             </owl:Restriction>
         </rdf:type>
         <rdfs:label>1000-1500 Einsteins / m2 / sec</rdfs:label>
@@ -575,7 +575,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#OSU_0000002323232">
         <rdf:type rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Specimens"/>
-        <collected_in rdf:resource="http://purl.obolibrary.org/obo/UO_0000156#Maize_Field"/>
+        <collected_in rdf:resource="http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#Maize_Field"/>
     </owl:NamedIndividual>
     
 

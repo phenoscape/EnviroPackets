@@ -1,366 +1,661 @@
-@prefix :      <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#> .
-@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix entity_attribute1: <http://purl.obolibrary.org/obo/envo-p/patterns/entity_attribute/> .
-@prefix foo:   <http://geneontology.org/foo/> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix :  <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix oboInOwl:  <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix entity_attribute1:  <http://purl.obolibrary.org/obo/envo-p/patterns/entity_attribute/> .
+@prefix foo:  <http://geneontology.org/foo/> .
+@prefix protege:  <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix envo:  <http://purl.obolibrary.org/obo/envo#> .
-@prefix entity_attribute: <http://purl.obolibrary.org/obo/oba/patterns/entity_attribute/> .
-@prefix ENVO_trial: <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix entity_attribute:  <http://purl.obolibrary.org/obo/oba/patterns/entity_attribute/> .
+@prefix ENVO_trial:  <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix pato:  <http://purl.obolibrary.org/obo/pato#> .
-@prefix entity_quality: <http://purl.obolibrary.org/obo/oba/patterns/entity_quality/> .
-@prefix process_attribute: <http://purl.obolibrary.org/obo/envo-p/patterns/process_attribute/> .
-@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix entity_quality:  <http://purl.obolibrary.org/obo/oba/patterns/entity_quality/> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix process_attribute:  <http://purl.obolibrary.org/obo/envo-p/patterns/process_attribute/> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
-@prefix dc:    <http://purl.org/dc/elements/1.1/> .
-
-ENVO_trial:Light  a  owl:NamedIndividual , ENVO_trial:Parameter_type .
-
-ENVO_trial:datum_3  a                  owl:NamedIndividual , ENVO_trial:Environmental_parameters_datum ;
-        rdfs:label                     "light of hadal zone" ;
-        ENVO_trial:has_environment_type
-                ENVO_trial:Hadal_zone ;
-        ENVO_trial:has_parameter       ENVO_trial:0 ;
-        ENVO_trial:has_parameter_type  ENVO_trial:Light .
-
-<http://purl.obolibrary.org/obo/UO_0000156#Maize_Field>
-        a       owl:NamedIndividual , ENVO_trial:Environment_type .
-
-<http://purl.obolibrary.org/obo/UO_0000156#maizfieldtemperature>
-        a           owl:NamedIndividual , ENVO_trial:Environmental_parameters ;
-        a           [ a                  owl:Restriction ;
-                      owl:allValuesFrom  <http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_temperature> ;
-                      owl:onProperty     ENVO_trial:denotes
-                    ] ;
-        rdfs:label  "-20-50 celsius" .
-
-ENVO_trial:Environmental_parameters_datum
-        a       owl:Class .
-
-obo:ENVO_00000214  owl:equivalentClass  ENVO_trial:semantic_representation_of_Hadal_Zone_light , ENVO_trial:semantic_representation_of_Hadal_Zone_pressure , <http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature> .
-
-ENVO_trial:collected_in
-        a       owl:ObjectProperty .
-
-<http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_light>
-        a                owl:Class ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      obo:RO_0000053 ;
-                           owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( obo:PATO_0015013
-                                                                       [ a                   owl:Restriction ;
-                                                                         owl:onProperty      obo:IAO_0000417 ;
-                                                                         owl:someValuesFrom  [ a                   owl:Class ;
-                                                                                               owl:intersectionOf  ( [ a               owl:Restriction ;
-                                                                                                                       owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second> ;
-                                                                                                                       owl:onProperty  obo:IAO_0000039
-                                                                                                                     ]
-                                                                                                                     [ a                   owl:Restriction ;
-                                                                                                                       owl:onProperty      obo:IAO_0000004 ;
-                                                                                                                       owl:someValuesFrom  [ a                   rdfs:Datatype ;
-                                                                                                                                             owl:intersectionOf  ( [ a                     rdfs:Datatype ;
-                                                                                                                                                                     owl:onDatatype        xsd:float ;
-                                                                                                                                                                     owl:withRestrictions  ( [ xsd:minInclusive  "1000.0"^^xsd:float ]
-                                                                                                                                                                                           )
-                                                                                                                                                                   ]
-                                                                                                                                                                   [ a                     rdfs:Datatype ;
-                                                                                                                                                                     owl:onDatatype        xsd:float ;
-                                                                                                                                                                     owl:withRestrictions  ( [ xsd:maxInclusive  "1500.0"^^xsd:float ]
-                                                                                                                                                                                           )
-                                                                                                                                                                   ]
-                                                                                                                                                                 )
-                                                                                                                                           ]
-                                                                                                                     ]
-                                                                                                                   )
-                                                                                             ]
-                                                                       ]
-                                                                     )
-                                               ]
-                         ] .
-
-ENVO_trial:datum_2  a                  owl:NamedIndividual , ENVO_trial:Environmental_parameters_datum ;
-        rdfs:label                     "pressure of hadal zone" ;
-        ENVO_trial:has_environment_type
-                ENVO_trial:Hadal_zone ;
-        ENVO_trial:has_parameter       ENVO_trial:greater_than_110_MPa ;
-        ENVO_trial:has_parameter_type  ENVO_trial:Pressure .
-
-<http://purl.obolibrary.org/obo/UO_0000156#C>
-        a       owl:NamedIndividual , ENVO_trial:Unit_individuals .
+@prefix dc:  <http://purl.org/dc/elements/1.1/> .
 
 <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial>
-        a            owl:Ontology ;
-        owl:imports  <http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl> , <http://purl.obolibrary.org/obo/uo/releases/2017-09-25/uo.owl> , <http://purl.obolibrary.org/obo/ro/releases/2017-10-02/ro.owl> , <http://purl.obolibrary.org/obo/envo/releases/2017-08-22/envo.owl> , <http://purl.obolibrary.org/obo/pato/releases/2017-07-10/pato.owl> .
+        rdf:type     owl:Ontology ;
+        owl:imports  <http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl> ;
+        owl:imports  <http://purl.obolibrary.org/obo/uo/releases/2017-09-25/uo.owl> ;
+        owl:imports  <http://purl.obolibrary.org/obo/ro/releases/2017-10-02/ro.owl> ;
+        owl:imports  <http://purl.obolibrary.org/obo/envo/releases/2017-08-22/envo.owl> ;
+        owl:imports  <http://purl.obolibrary.org/obo/pato/releases/2017-07-10/pato.owl> .
 
-ENVO_trial:OWLNamedIndividual_00000000000000000003
-        a           owl:NamedIndividual , obo:ENVO_00000214 ;
-        rdfs:label  "mariana_trench"@en .
+ENVO_trial:collected_in
+        rdf:type  owl:ObjectProperty .
 
-ENVO_trial:OSU_0000002323232
-        a                        owl:NamedIndividual , ENVO_trial:Specimens ;
-        ENVO_trial:collected_in  <http://purl.obolibrary.org/obo/UO_0000156#Maize_Field> .
-
-<http://purl.obolibrary.org/obo/UO_0000156#temperature_of_maize_field>
-        a                              owl:NamedIndividual , ENVO_trial:Environmental_parameters_datum ;
-        rdfs:label                     "temperature of maize field" ;
-        ENVO_trial:has_environment_type
-                <http://purl.obolibrary.org/obo/UO_0000156#Maize_Field> ;
-        ENVO_trial:has_parameter       <http://purl.obolibrary.org/obo/UO_0000156#maizfieldtemperature> ;
-        ENVO_trial:has_parameter_type  ENVO_trial:Temperature .
-
-ENVO_trial:datum_1  a                  owl:NamedIndividual , ENVO_trial:Environmental_parameters_datum ;
-        rdfs:label                     "temperature of hadal zone" ;
-        ENVO_trial:has_environment_type
-                ENVO_trial:Hadal_zone ;
-        ENVO_trial:has_parameter       <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#'0–4_celsius'> ;
-        ENVO_trial:has_parameter_type  ENVO_trial:Temperature .
-
-ENVO_trial:Environmental_parameters
-        a       owl:Class .
-
-<http://purl.obolibrary.org/obo/UO_0000156#MPa>
-        a       owl:NamedIndividual , ENVO_trial:Unit_individuals .
-
-ENVO_trial:Parameter_type
-        a       owl:Class .
-
-<http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_pressure>
-        a                owl:Class ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      obo:RO_0000053 ;
-                           owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( obo:PATO_0001025
-                                                                       [ a                   owl:Restriction ;
-                                                                         owl:onProperty      obo:IAO_0000417 ;
-                                                                         owl:someValuesFrom  [ a                   owl:Class ;
-                                                                                               owl:intersectionOf  ( [ a               owl:Restriction ;
-                                                                                                                       owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#MPa> ;
-                                                                                                                       owl:onProperty  obo:IAO_0000039
-                                                                                                                     ]
-                                                                                                                     [ a               owl:Restriction ;
-                                                                                                                       owl:hasValue    "0.1"^^xsd:float ;
-                                                                                                                       owl:onProperty  obo:IAO_0000004
-                                                                                                                     ]
-                                                                                                                   )
-                                                                                             ]
-                                                                       ]
-                                                                     )
-                                               ]
-                         ] .
-
-ENVO_trial:Environment_type
-        a       owl:Class .
-
-ENVO_trial:Temperature
-        a       owl:NamedIndividual , ENVO_trial:Parameter_type .
-
-ENVO_trial:Hadal_zone
-        a       owl:NamedIndividual , ENVO_trial:Environment_type .
-
-<http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#'0-4_celsius'>
-        a           owl:Thing , owl:NamedIndividual ;
-        rdfs:label  "0-4 celsius" .
-
-ENVO_trial:0  a     owl:NamedIndividual , ENVO_trial:Environmental_parameters ;
-        a           [ a                  owl:Restriction ;
-                      owl:allValuesFrom  ENVO_trial:semantic_representation_of_Hadal_Zone_light ;
-                      owl:onProperty     ENVO_trial:denotes
-                    ] ;
-        rdfs:label  "0 µm Einsteins / m2 / sec" .
+ENVO_trial:denotes  rdf:type  owl:ObjectProperty .
 
 ENVO_trial:has_environment_type
-        a       owl:ObjectProperty .
-
-<http://purl.obolibrary.org/obo/UO_0000156#1000-1500_Einsteins_/_m2_/_sec>
-        a           owl:NamedIndividual , ENVO_trial:Environmental_parameters ;
-        a           [ a                  owl:Restriction ;
-                      owl:allValuesFrom  <http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_light> ;
-                      owl:onProperty     ENVO_trial:denotes
-                    ] ;
-        rdfs:label  "1000-1500 Einsteins / m2 / sec" .
-
-ENVO_trial:semantic_representation_of_Hadal_Zone_light
-        a                owl:Class ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      obo:RO_0000053 ;
-                           owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( obo:PATO_0015013
-                                                                       [ a                   owl:Restriction ;
-                                                                         owl:onProperty      obo:IAO_0000417 ;
-                                                                         owl:someValuesFrom  [ a                   owl:Class ;
-                                                                                               owl:intersectionOf  ( [ a               owl:Restriction ;
-                                                                                                                       owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second> ;
-                                                                                                                       owl:onProperty  obo:IAO_0000039
-                                                                                                                     ]
-                                                                                                                     [ a               owl:Restriction ;
-                                                                                                                       owl:hasValue    0 ;
-                                                                                                                       owl:onProperty  obo:IAO_0000004
-                                                                                                                     ]
-                                                                                                                   )
-                                                                                             ]
-                                                                       ]
-                                                                     )
-                                               ]
-                         ] .
-
-<http://purl.obolibrary.org/obo/UO_0000156#einstein_per_square_meter_per_second>
-        a           owl:NamedIndividual , ENVO_trial:Unit_individuals ;
-        rdfs:label  "einstein per square meter per second" .
-
-<http://purl.obolibrary.org/obo/UO_0000156#light_of_maize_field>
-        a                              owl:NamedIndividual , ENVO_trial:Environmental_parameters_datum ;
-        rdfs:label                     "light of maize field" ;
-        ENVO_trial:has_environment_type
-                <http://purl.obolibrary.org/obo/UO_0000156#Maize_Field> ;
-        ENVO_trial:has_parameter       <http://purl.obolibrary.org/obo/UO_0000156#1000-1500_Einsteins_/_m2_/_sec> ;
-        ENVO_trial:has_parameter_type  ENVO_trial:Light .
-
-ENVO_trial:denotes  a  owl:ObjectProperty .
-
-ENVO_trial:Pressure  a  owl:NamedIndividual , ENVO_trial:Parameter_type .
-
-<http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#'0–4_celsius'>
-        a           owl:NamedIndividual , ENVO_trial:Environmental_parameters ;
-        rdfs:label  "0-4 celsius" .
-
-<http://purl.obolibrary.org/obo/UO_0000156#pressuremaizefield>
-        a           owl:NamedIndividual , ENVO_trial:Environmental_parameters ;
-        a           [ a                  owl:Restriction ;
-                      owl:allValuesFrom  <http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_pressure> ;
-                      owl:onProperty     ENVO_trial:denotes
-                    ] ;
-        rdfs:label  "0.1 MPa" .
-
-<http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature>
-        a                owl:Class ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      obo:RO_0000053 ;
-                           owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( obo:PATO_0000146
-                                                                       [ a                   owl:Restriction ;
-                                                                         owl:onProperty      obo:IAO_0000417 ;
-                                                                         owl:someValuesFrom  [ a                   owl:Class ;
-                                                                                               owl:intersectionOf  ( [ a               owl:Restriction ;
-                                                                                                                       owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#C> ;
-                                                                                                                       owl:onProperty  obo:IAO_0000039
-                                                                                                                     ]
-                                                                                                                     [ a                   owl:Restriction ;
-                                                                                                                       owl:onProperty      obo:IAO_0000004 ;
-                                                                                                                       owl:someValuesFrom  [ a                   rdfs:Datatype ;
-                                                                                                                                             owl:intersectionOf  ( [ a                     rdfs:Datatype ;
-                                                                                                                                                                     owl:onDatatype        xsd:float ;
-                                                                                                                                                                     owl:withRestrictions  ( [ xsd:minInclusive  "0.0"^^xsd:float ]
-                                                                                                                                                                                           )
-                                                                                                                                                                   ]
-                                                                                                                                                                   [ a                     rdfs:Datatype ;
-                                                                                                                                                                     owl:onDatatype        xsd:float ;
-                                                                                                                                                                     owl:withRestrictions  ( [ xsd:maxInclusive  "4.0"^^xsd:float ]
-                                                                                                                                                                                           )
-                                                                                                                                                                   ]
-                                                                                                                                                                 )
-                                                                                                                                           ]
-                                                                                                                     ]
-                                                                                                                   )
-                                                                                             ]
-                                                                       ]
-                                                                     )
-                                               ]
-                         ] .
-
-ENVO_trial:has_parameter_type
-        a       owl:ObjectProperty .
-
-ENVO_trial:Unit_individuals
-        a       owl:Class .
-
-<http://purl.obolibrary.org/obo/UO_0000156#pressure_of_maize_field>
-        a                              owl:NamedIndividual , ENVO_trial:Environmental_parameters_datum ;
-        rdfs:label                     "pressure of maize field" ;
-        ENVO_trial:has_environment_type
-                <http://purl.obolibrary.org/obo/UO_0000156#Maize_Field> ;
-        ENVO_trial:has_parameter       <http://purl.obolibrary.org/obo/UO_0000156#pressuremaizefield> ;
-        ENVO_trial:has_parameter_type  ENVO_trial:Pressure .
-
-ENVO_trial:semantic_representation_of_Hadal_Zone_pressure
-        a                owl:Class ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      obo:RO_0000053 ;
-                           owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( obo:PATO_0001025
-                                                                       [ a                   owl:Restriction ;
-                                                                         owl:onProperty      obo:IAO_0000417 ;
-                                                                         owl:someValuesFrom  [ a                   owl:Class ;
-                                                                                               owl:intersectionOf  ( [ a               owl:Restriction ;
-                                                                                                                       owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#MPa> ;
-                                                                                                                       owl:onProperty  obo:IAO_0000039
-                                                                                                                     ]
-                                                                                                                     [ a                   owl:Restriction ;
-                                                                                                                       owl:onProperty      obo:IAO_0000004 ;
-                                                                                                                       owl:someValuesFrom  [ a                     rdfs:Datatype ;
-                                                                                                                                             owl:onDatatype        xsd:float ;
-                                                                                                                                             owl:withRestrictions  ( [ xsd:minExclusive  "110.0"^^xsd:float ]
-                                                                                                                                                                   )
-                                                                                                                                           ]
-                                                                                                                     ]
-                                                                                                                   )
-                                                                                             ]
-                                                                       ]
-                                                                     )
-                                               ]
-                         ] .
-
-ENVO_trial:greater_than_110_MPa
-        a           owl:NamedIndividual , ENVO_trial:Environmental_parameters ;
-        rdfs:label  ">110 MPa" .
-
-<http://purl.obolibrary.org/obo/UO_0000156#semantic_representation_of_Maize_Field_temperature>
-        a                owl:Class ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      obo:RO_0000053 ;
-                           owl:someValuesFrom  [ a                   owl:Class ;
-                                                 owl:intersectionOf  ( obo:PATO_0000146
-                                                                       [ a                   owl:Restriction ;
-                                                                         owl:onProperty      obo:IAO_0000417 ;
-                                                                         owl:someValuesFrom  [ a                   owl:Class ;
-                                                                                               owl:intersectionOf  ( [ a               owl:Restriction ;
-                                                                                                                       owl:hasValue    <http://purl.obolibrary.org/obo/UO_0000156#C> ;
-                                                                                                                       owl:onProperty  obo:IAO_0000039
-                                                                                                                     ]
-                                                                                                                     [ a                   owl:Restriction ;
-                                                                                                                       owl:onProperty      obo:IAO_0000004 ;
-                                                                                                                       owl:someValuesFrom  [ a                   rdfs:Datatype ;
-                                                                                                                                             owl:intersectionOf  ( [ a                     rdfs:Datatype ;
-                                                                                                                                                                     owl:onDatatype        xsd:float ;
-                                                                                                                                                                     owl:withRestrictions  ( [ xsd:minInclusive  "-20.0"^^xsd:float ]
-                                                                                                                                                                                           )
-                                                                                                                                                                   ]
-                                                                                                                                                                   [ a                     rdfs:Datatype ;
-                                                                                                                                                                     owl:onDatatype        xsd:float ;
-                                                                                                                                                                     owl:withRestrictions  ( [ xsd:maxInclusive  "50.0"^^xsd:float ]
-                                                                                                                                                                                           )
-                                                                                                                                                                   ]
-                                                                                                                                                                 )
-                                                                                                                                           ]
-                                                                                                                     ]
-                                                                                                                   )
-                                                                                             ]
-                                                                       ]
-                                                                     )
-                                               ]
-                         ] .
-
-ENVO_trial:OSU_0000000000234234234
-        a                        owl:NamedIndividual , ENVO_trial:Specimens ;
-        a                        [ a                  owl:Restriction ;
-                                   owl:allValuesFrom  obo:ENVO_00000214 ;
-                                   owl:onProperty     ENVO_trial:collected_in
-                                 ] ;
-        ENVO_trial:collected_in  ENVO_trial:OWLNamedIndividual_00000000000000000003 .
+        rdf:type  owl:ObjectProperty .
 
 ENVO_trial:has_parameter
-        a       owl:ObjectProperty .
+        rdf:type  owl:ObjectProperty .
 
-ENVO_trial:Specimens  a  owl:Class .
+ENVO_trial:has_parameter_type
+        rdf:type  owl:ObjectProperty .
+
+obo:ENVO_00000214  owl:equivalentClass  ENVO_trial:semantic_representation_of_Hadal_Zone_light ;
+        owl:equivalentClass  ENVO_trial:semantic_representation_of_Hadal_Zone_pressure ;
+        owl:equivalentClass  <http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature> .
+
+ENVO_trial:semantic_representation_of_Maize_Field_light
+        rdf:type  owl:Class .
+
+_:b0    rdf:type  owl:Restriction .
+
+ENVO_trial:semantic_representation_of_Maize_Field_light
+        rdfs:subClassOf  _:b0 .
+
+_:b0    owl:onProperty  obo:RO_0000053 .
+
+_:b1    rdf:type  owl:Class .
+
+_:b0    owl:someValuesFrom  _:b1 .
+
+_:b1    owl:intersectionOf  _:b2 .
+
+_:b2    rdf:first  obo:PATO_0015013 .
+
+_:b3    rdf:type  owl:Restriction .
+
+_:b2    rdf:rest  _:b4 .
+
+_:b4    rdf:first  _:b3 .
+
+_:b3    owl:onProperty  obo:IAO_0000417 .
+
+_:b5    rdf:type  owl:Class .
+
+_:b3    owl:someValuesFrom  _:b5 .
+
+_:b6    rdf:type  owl:Restriction .
+
+_:b5    owl:intersectionOf  _:b7 .
+
+_:b7    rdf:first  _:b6 .
+
+_:b6    owl:onProperty  obo:IAO_0000039 ;
+        owl:hasValue    ENVO_trial:einstein_per_square_meter_per_second .
+
+_:b8    rdf:type  owl:Restriction .
+
+_:b7    rdf:rest  _:b9 .
+
+_:b9    rdf:first  _:b8 .
+
+_:b8    owl:onProperty  obo:IAO_0000004 .
+
+_:b10   rdf:type  rdfs:Datatype .
+
+_:b8    owl:someValuesFrom  _:b10 .
+
+_:b11   rdf:type  rdfs:Datatype .
+
+_:b10   owl:intersectionOf  _:b12 .
+
+_:b12   rdf:first  _:b11 .
+
+_:b11   owl:onDatatype        xsd:float ;
+        owl:withRestrictions  _:b13 .
+
+_:b13   rdf:first  _:b14 .
+
+_:b14   xsd:minInclusive  "1000.0"^^xsd:float .
+
+_:b13   rdf:rest  rdf:nil .
+
+_:b15   rdf:type  rdfs:Datatype .
+
+_:b12   rdf:rest  _:b16 .
+
+_:b16   rdf:first  _:b15 .
+
+_:b15   owl:onDatatype        xsd:float ;
+        owl:withRestrictions  _:b17 .
+
+_:b17   rdf:first  _:b18 .
+
+_:b18   xsd:maxInclusive  "1500.0"^^xsd:float .
+
+_:b17   rdf:rest  rdf:nil .
+
+_:b16   rdf:rest  rdf:nil .
+
+_:b9    rdf:rest  rdf:nil .
+
+_:b4    rdf:rest  rdf:nil .
+
+ENVO_trial:semantic_representation_of_Maize_Field_pressure
+        rdf:type  owl:Class .
+
+_:b19   rdf:type  owl:Restriction .
+
+ENVO_trial:semantic_representation_of_Maize_Field_pressure
+        rdfs:subClassOf  _:b19 .
+
+_:b19   owl:onProperty  obo:RO_0000053 .
+
+_:b20   rdf:type  owl:Class .
+
+_:b19   owl:someValuesFrom  _:b20 .
+
+_:b20   owl:intersectionOf  _:b21 .
+
+_:b21   rdf:first  obo:PATO_0001025 .
+
+_:b22   rdf:type  owl:Restriction .
+
+_:b21   rdf:rest  _:b23 .
+
+_:b23   rdf:first  _:b22 .
+
+_:b22   owl:onProperty  obo:IAO_0000417 .
+
+_:b24   rdf:type  owl:Class .
+
+_:b22   owl:someValuesFrom  _:b24 .
+
+_:b25   rdf:type  owl:Restriction .
+
+_:b24   owl:intersectionOf  _:b26 .
+
+_:b26   rdf:first  _:b25 .
+
+_:b25   owl:onProperty  obo:IAO_0000039 ;
+        owl:hasValue    ENVO_trial:MPa .
+
+_:b27   rdf:type  owl:Restriction .
+
+_:b26   rdf:rest  _:b28 .
+
+_:b28   rdf:first  _:b27 .
+
+_:b27   owl:onProperty  obo:IAO_0000004 ;
+        owl:hasValue    "0.1"^^xsd:float .
+
+_:b28   rdf:rest  rdf:nil .
+
+_:b23   rdf:rest  rdf:nil .
+
+ENVO_trial:semantic_representation_of_Maize_Field_temperature
+        rdf:type  owl:Class .
+
+_:b29   rdf:type  owl:Restriction .
+
+ENVO_trial:semantic_representation_of_Maize_Field_temperature
+        rdfs:subClassOf  _:b29 .
+
+_:b29   owl:onProperty  obo:RO_0000053 .
+
+_:b30   rdf:type  owl:Class .
+
+_:b29   owl:someValuesFrom  _:b30 .
+
+_:b30   owl:intersectionOf  _:b31 .
+
+_:b31   rdf:first  obo:PATO_0000146 .
+
+_:b32   rdf:type  owl:Restriction .
+
+_:b31   rdf:rest  _:b33 .
+
+_:b33   rdf:first  _:b32 .
+
+_:b32   owl:onProperty  obo:IAO_0000417 .
+
+_:b34   rdf:type  owl:Class .
+
+_:b32   owl:someValuesFrom  _:b34 .
+
+_:b35   rdf:type  owl:Restriction .
+
+_:b34   owl:intersectionOf  _:b36 .
+
+_:b36   rdf:first  _:b35 .
+
+_:b35   owl:onProperty  obo:IAO_0000039 ;
+        owl:hasValue    ENVO_trial:C .
+
+_:b37   rdf:type  owl:Restriction .
+
+_:b36   rdf:rest  _:b38 .
+
+_:b38   rdf:first  _:b37 .
+
+_:b37   owl:onProperty  obo:IAO_0000004 .
+
+_:b39   rdf:type  rdfs:Datatype .
+
+_:b37   owl:someValuesFrom  _:b39 .
+
+_:b40   rdf:type  rdfs:Datatype .
+
+_:b39   owl:intersectionOf  _:b41 .
+
+_:b41   rdf:first  _:b40 .
+
+_:b40   owl:onDatatype        xsd:float ;
+        owl:withRestrictions  _:b42 .
+
+_:b42   rdf:first  _:b43 .
+
+_:b43   xsd:minInclusive  "-20.0"^^xsd:float .
+
+_:b42   rdf:rest  rdf:nil .
+
+_:b44   rdf:type  rdfs:Datatype .
+
+_:b41   rdf:rest  _:b45 .
+
+_:b45   rdf:first  _:b44 .
+
+_:b44   owl:onDatatype        xsd:float ;
+        owl:withRestrictions  _:b46 .
+
+_:b46   rdf:first  _:b47 .
+
+_:b47   xsd:maxInclusive  "50.0"^^xsd:float .
+
+_:b46   rdf:rest  rdf:nil .
+
+_:b45   rdf:rest  rdf:nil .
+
+_:b38   rdf:rest  rdf:nil .
+
+_:b33   rdf:rest  rdf:nil .
+
+ENVO_trial:Environment_type
+        rdf:type  owl:Class .
+
+ENVO_trial:Environmental_parameters
+        rdf:type  owl:Class .
+
+ENVO_trial:Environmental_parameters_datum
+        rdf:type  owl:Class .
+
+ENVO_trial:Parameter_type
+        rdf:type  owl:Class .
+
+ENVO_trial:Specimens  rdf:type  owl:Class .
+
+ENVO_trial:Unit_individuals
+        rdf:type  owl:Class .
+
+ENVO_trial:semantic_representation_of_Hadal_Zone_light
+        rdf:type  owl:Class .
+
+_:b48   rdf:type  owl:Restriction .
+
+ENVO_trial:semantic_representation_of_Hadal_Zone_light
+        rdfs:subClassOf  _:b48 .
+
+_:b48   owl:onProperty  obo:RO_0000053 .
+
+_:b49   rdf:type  owl:Class .
+
+_:b48   owl:someValuesFrom  _:b49 .
+
+_:b49   owl:intersectionOf  _:b50 .
+
+_:b50   rdf:first  obo:PATO_0015013 .
+
+_:b51   rdf:type  owl:Restriction .
+
+_:b50   rdf:rest  _:b52 .
+
+_:b52   rdf:first  _:b51 .
+
+_:b51   owl:onProperty  obo:IAO_0000417 .
+
+_:b53   rdf:type  owl:Class .
+
+_:b51   owl:someValuesFrom  _:b53 .
+
+_:b54   rdf:type  owl:Restriction .
+
+_:b53   owl:intersectionOf  _:b55 .
+
+_:b55   rdf:first  _:b54 .
+
+_:b54   owl:onProperty  obo:IAO_0000039 ;
+        owl:hasValue    ENVO_trial:einstein_per_square_meter_per_second .
+
+_:b56   rdf:type  owl:Restriction .
+
+_:b55   rdf:rest  _:b57 .
+
+_:b57   rdf:first  _:b56 .
+
+_:b56   owl:onProperty  obo:IAO_0000004 ;
+        owl:hasValue    0 .
+
+_:b57   rdf:rest  rdf:nil .
+
+_:b52   rdf:rest  rdf:nil .
+
+ENVO_trial:semantic_representation_of_Hadal_Zone_pressure
+        rdf:type  owl:Class .
+
+_:b58   rdf:type  owl:Restriction .
+
+ENVO_trial:semantic_representation_of_Hadal_Zone_pressure
+        rdfs:subClassOf  _:b58 .
+
+_:b58   owl:onProperty  obo:RO_0000053 .
+
+_:b59   rdf:type  owl:Class .
+
+_:b58   owl:someValuesFrom  _:b59 .
+
+_:b59   owl:intersectionOf  _:b60 .
+
+_:b60   rdf:first  obo:PATO_0001025 .
+
+_:b61   rdf:type  owl:Restriction .
+
+_:b60   rdf:rest  _:b62 .
+
+_:b62   rdf:first  _:b61 .
+
+_:b61   owl:onProperty  obo:IAO_0000417 .
+
+_:b63   rdf:type  owl:Class .
+
+_:b61   owl:someValuesFrom  _:b63 .
+
+_:b64   rdf:type  owl:Restriction .
+
+_:b63   owl:intersectionOf  _:b65 .
+
+_:b65   rdf:first  _:b64 .
+
+_:b64   owl:onProperty  obo:IAO_0000039 ;
+        owl:hasValue    ENVO_trial:MPa .
+
+_:b66   rdf:type  owl:Restriction .
+
+_:b65   rdf:rest  _:b67 .
+
+_:b67   rdf:first  _:b66 .
+
+_:b66   owl:onProperty  obo:IAO_0000004 .
+
+_:b68   rdf:type  rdfs:Datatype .
+
+_:b66   owl:someValuesFrom  _:b68 .
+
+_:b68   owl:onDatatype        xsd:float ;
+        owl:withRestrictions  _:b69 .
+
+_:b69   rdf:first  _:b70 .
+
+_:b70   xsd:minExclusive  "110.0"^^xsd:float .
+
+_:b69   rdf:rest  rdf:nil .
+
+_:b67   rdf:rest  rdf:nil .
+
+_:b62   rdf:rest  rdf:nil .
+
+<http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature>
+        rdf:type  owl:Class .
+
+_:b71   rdf:type  owl:Restriction .
+
+<http://www.semanticweb.org/imiko/ontologies/2017/11/untitled-ontology-138#semantic_representation_of_Hadal_Zone_temperature>
+        rdfs:subClassOf  _:b71 .
+
+_:b71   owl:onProperty  obo:RO_0000053 .
+
+_:b72   rdf:type  owl:Class .
+
+_:b71   owl:someValuesFrom  _:b72 .
+
+_:b72   owl:intersectionOf  _:b73 .
+
+_:b73   rdf:first  obo:PATO_0000146 .
+
+_:b74   rdf:type  owl:Restriction .
+
+_:b73   rdf:rest  _:b75 .
+
+_:b75   rdf:first  _:b74 .
+
+_:b74   owl:onProperty  obo:IAO_0000417 .
+
+_:b76   rdf:type  owl:Class .
+
+_:b74   owl:someValuesFrom  _:b76 .
+
+_:b77   rdf:type  owl:Restriction .
+
+_:b76   owl:intersectionOf  _:b78 .
+
+_:b78   rdf:first  _:b77 .
+
+_:b77   owl:onProperty  obo:IAO_0000039 ;
+        owl:hasValue    ENVO_trial:C .
+
+_:b79   rdf:type  owl:Restriction .
+
+_:b78   rdf:rest  _:b80 .
+
+_:b80   rdf:first  _:b79 .
+
+_:b79   owl:onProperty  obo:IAO_0000004 .
+
+_:b81   rdf:type  rdfs:Datatype .
+
+_:b79   owl:someValuesFrom  _:b81 .
+
+_:b82   rdf:type  rdfs:Datatype .
+
+_:b81   owl:intersectionOf  _:b83 .
+
+_:b83   rdf:first  _:b82 .
+
+_:b82   owl:onDatatype        xsd:float ;
+        owl:withRestrictions  _:b84 .
+
+_:b84   rdf:first  _:b85 .
+
+_:b85   xsd:minInclusive  "0.0"^^xsd:float .
+
+_:b84   rdf:rest  rdf:nil .
+
+_:b86   rdf:type  rdfs:Datatype .
+
+_:b83   rdf:rest  _:b87 .
+
+_:b87   rdf:first  _:b86 .
+
+_:b86   owl:onDatatype        xsd:float ;
+        owl:withRestrictions  _:b88 .
+
+_:b88   rdf:first  _:b89 .
+
+_:b89   xsd:maxInclusive  "4.0"^^xsd:float .
+
+_:b88   rdf:rest  rdf:nil .
+
+_:b87   rdf:rest  rdf:nil .
+
+_:b80   rdf:rest  rdf:nil .
+
+_:b75   rdf:rest  rdf:nil .
+
+ENVO_trial:C  rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Unit_individuals .
+
+ENVO_trial:MPa  rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Unit_individuals .
+
+ENVO_trial:Maize_Field
+        rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Environment_type .
+
+ENVO_trial:einstein_per_square_meter_per_second
+        rdf:type    owl:NamedIndividual ;
+        rdf:type    ENVO_trial:Unit_individuals ;
+        rdfs:label  "einstein per square meter per second" .
+
+ENVO_trial:light_of_maize_field
+        rdf:type                       owl:NamedIndividual ;
+        rdf:type                       ENVO_trial:Environmental_parameters_datum ;
+        ENVO_trial:has_environment_type  ENVO_trial:Maize_Field ;
+        ENVO_trial:has_parameter       <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#1000-1500_Einsteins_/_m2_/_sec> ;
+        ENVO_trial:has_parameter_type  ENVO_trial:Light ;
+        rdfs:label                     "light of maize field" .
+
+ENVO_trial:maizfieldtemperature
+        rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Environmental_parameters .
+
+_:b90   rdf:type  owl:Restriction .
+
+ENVO_trial:maizfieldtemperature
+        rdf:type  _:b90 .
+
+_:b90   owl:onProperty     ENVO_trial:denotes ;
+        owl:allValuesFrom  ENVO_trial:semantic_representation_of_Maize_Field_temperature .
+
+ENVO_trial:maizfieldtemperature
+        rdfs:label  "-20-50 celsius" .
+
+ENVO_trial:pressure_of_maize_field
+        rdf:type                       owl:NamedIndividual ;
+        rdf:type                       ENVO_trial:Environmental_parameters_datum ;
+        ENVO_trial:has_environment_type  ENVO_trial:Maize_Field ;
+        ENVO_trial:has_parameter       ENVO_trial:pressuremaizefield ;
+        ENVO_trial:has_parameter_type  ENVO_trial:Pressure ;
+        rdfs:label                     "pressure of maize field" .
+
+ENVO_trial:pressuremaizefield
+        rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Environmental_parameters .
+
+_:b91   rdf:type  owl:Restriction .
+
+ENVO_trial:pressuremaizefield
+        rdf:type  _:b91 .
+
+_:b91   owl:onProperty     ENVO_trial:denotes ;
+        owl:allValuesFrom  ENVO_trial:semantic_representation_of_Maize_Field_pressure .
+
+ENVO_trial:pressuremaizefield
+        rdfs:label  "0.1 MPa" .
+
+ENVO_trial:temperature_of_maize_field
+        rdf:type                       owl:NamedIndividual ;
+        rdf:type                       ENVO_trial:Environmental_parameters_datum ;
+        ENVO_trial:has_environment_type  ENVO_trial:Maize_Field ;
+        ENVO_trial:has_parameter       ENVO_trial:maizfieldtemperature ;
+        ENVO_trial:has_parameter_type  ENVO_trial:Temperature ;
+        rdfs:label                     "temperature of maize field" .
+
+<http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#1000-1500_Einsteins_/_m2_/_sec>
+        rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Environmental_parameters .
+
+_:b92   rdf:type  owl:Restriction .
+
+<http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#1000-1500_Einsteins_/_m2_/_sec>
+        rdf:type  _:b92 .
+
+_:b92   owl:onProperty     ENVO_trial:denotes ;
+        owl:allValuesFrom  ENVO_trial:semantic_representation_of_Maize_Field_light .
+
+<http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#1000-1500_Einsteins_/_m2_/_sec>
+        rdfs:label  "1000-1500 Einsteins / m2 / sec" .
+
+ENVO_trial:Hadal_zone
+        rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Environment_type .
+
+ENVO_trial:Light  rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Parameter_type .
+
+ENVO_trial:OSU_0000000000234234234
+        rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Specimens .
+
+_:b93   rdf:type  owl:Restriction .
+
+ENVO_trial:OSU_0000000000234234234
+        rdf:type  _:b93 .
+
+_:b93   owl:onProperty     ENVO_trial:collected_in ;
+        owl:allValuesFrom  obo:ENVO_00000214 .
+
+ENVO_trial:OSU_0000000000234234234
+        ENVO_trial:collected_in  ENVO_trial:OWLNamedIndividual_00000000000000000003 .
+
+ENVO_trial:OSU_0000002323232
+        rdf:type                 owl:NamedIndividual ;
+        rdf:type                 ENVO_trial:Specimens ;
+        ENVO_trial:collected_in  ENVO_trial:Maize_Field .
+
+ENVO_trial:OWLNamedIndividual_00000000000000000003
+        rdf:type    owl:NamedIndividual ;
+        rdf:type    obo:ENVO_00000214 ;
+        rdfs:label  "mariana_trench"@en .
+
+ENVO_trial:Pressure  rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Parameter_type .
+
+ENVO_trial:Temperature
+        rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Parameter_type .
+
+ENVO_trial:datum_1  rdf:type           owl:NamedIndividual ;
+        rdf:type                       ENVO_trial:Environmental_parameters_datum ;
+        ENVO_trial:has_environment_type  ENVO_trial:Hadal_zone ;
+        ENVO_trial:has_parameter       <http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#'0–4_celsius'> ;
+        ENVO_trial:has_parameter_type  ENVO_trial:Temperature ;
+        rdfs:label                     "temperature of hadal zone" .
+
+ENVO_trial:datum_2  rdf:type           owl:NamedIndividual ;
+        rdf:type                       ENVO_trial:Environmental_parameters_datum ;
+        ENVO_trial:has_environment_type  ENVO_trial:Hadal_zone ;
+        ENVO_trial:has_parameter       ENVO_trial:greater_than_110_MPa ;
+        ENVO_trial:has_parameter_type  ENVO_trial:Pressure ;
+        rdfs:label                     "pressure of hadal zone" .
+
+ENVO_trial:datum_3  rdf:type           owl:NamedIndividual ;
+        rdf:type                       ENVO_trial:Environmental_parameters_datum ;
+        ENVO_trial:has_environment_type  ENVO_trial:Hadal_zone ;
+        ENVO_trial:has_parameter       ENVO_trial:0 ;
+        ENVO_trial:has_parameter_type  ENVO_trial:Light ;
+        rdfs:label                     "light of hadal zone" .
+
+ENVO_trial:greater_than_110_MPa
+        rdf:type    owl:NamedIndividual ;
+        rdf:type    ENVO_trial:Environmental_parameters ;
+        rdfs:label  ">110 MPa" .
+
+<http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#'0-4_celsius'>
+        rdf:type    owl:Thing ;
+        rdf:type    owl:NamedIndividual ;
+        rdfs:label  "0-4 celsius" .
+
+<http://www.semanticweb.org/imiko/ontologies/2017/11/ENVO_trial#'0–4_celsius'>
+        rdf:type    owl:NamedIndividual ;
+        rdf:type    ENVO_trial:Environmental_parameters ;
+        rdfs:label  "0-4 celsius" .
+
+ENVO_trial:0  rdf:type  owl:NamedIndividual ;
+        rdf:type  ENVO_trial:Environmental_parameters .
+
+_:b94   rdf:type  owl:Restriction .
+
+ENVO_trial:0  rdf:type  _:b94 .
+
+_:b94   owl:onProperty     ENVO_trial:denotes ;
+        owl:allValuesFrom  ENVO_trial:semantic_representation_of_Hadal_Zone_light .
+
+ENVO_trial:0  rdfs:label  "0 µm Einsteins / m2 / sec" .
