@@ -50,6 +50,7 @@ et:has_parameter_type ?what .
 ORDER BY ?env
 " semantics.senckenberg.de/sparql
 
+### Give all species in a Maize Field with certain light conditions: ###
 
 printf "\n4.) Print info of species in a Maize field with certain light condition using SPARQL 1. FILTER\n\n" 
 curl -H "Accept: text/csv" -F 'query=
@@ -69,8 +70,7 @@ WHERE {
 }' semantics.senckenberg.de/sparql
 
 
-
-### Give all species in a Maize Field with certain light conditions: ###
+### Give the value for the light condition in the habitat "maize field"  ###
 
 printf "\n5.) EnviroPackets query for values of light_of_maize_field.\n\n" 
 curl -H "Accept: text/csv" -F 'query=
