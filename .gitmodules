@@ -1,0 +1,4 @@
+[submodule "pp_v2"]
+	path = pp_v2
+	url = https://github.com/phenopackets/phenopacket-schema.git
+	branch = v2
