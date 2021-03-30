@@ -1,12 +1,12 @@
 syntax = "proto3";
 
-//package org.;
+package org.enviropackets.schema.v1;
 
 import "base.proto";
 import "phenopackets.proto";
 import "google/protobuf/timestamp.proto";
 
 option java_multiple_files = true;
-//option java_package = "org.phenopackets.schema.v1";
+option java_package = "org.enviropackets.schema.v1";
 
 option java_outer_classname = "EnviroPackets";
